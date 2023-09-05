@@ -1,4 +1,4 @@
-package com.systechafrica;
+package com.systechafrica.variables;
 
 import java.util.logging.Logger;
 
@@ -102,10 +102,7 @@ public class VariablesDemo {
 
         Long a = 2147483648L;
 
-        //int b =a.intValue();
-        int c = (int) a ;
-
-     LOGGER.info("int c value" + a);
+       
 
  }
 
