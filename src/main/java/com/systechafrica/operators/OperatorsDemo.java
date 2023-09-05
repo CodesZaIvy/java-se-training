@@ -7,6 +7,7 @@ public class OperatorsDemo {
     private static final Logger LOGGER =Logger.getLogger(OperatorsDemo.class.getName());
 
     private void arithmeticOperators(){
+
     //Addition Operator
 
         int studentOneAge = 22;
@@ -34,7 +35,7 @@ public class OperatorsDemo {
 
     //!To ensure correct result precision 
 
-    double divisionResultInDouble =  studentOneAge / studentTwoAge;
+    double divisionResultInDouble =  (double)studentOneAge / studentTwoAge;
      LOGGER.info("Age division in precision :" + divisionResultInDouble );
 
 
@@ -51,12 +52,14 @@ public class OperatorsDemo {
 
 
 }
-
+    private void assignmentOperators(){
+        
+    }
 
     public static void main(String[] args) {
         OperatorsDemo app = new OperatorsDemo();
         app.arithmeticOperators();
-        
+        app.assignmentOperators();
     }
     
 }
