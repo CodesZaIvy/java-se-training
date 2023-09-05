@@ -20,12 +20,26 @@ public class VariablesDemo {
         LOGGER.info("Constant variable "+ PI);
     }       
        private void integerTypes(){
-        variableDeclarations();
         LOGGER.info("Integer Minimum" + Integer.MIN_VALUE);
         LOGGER.info("Integer Minimum" + Integer.MAX_VALUE);
 
         LOGGER.info("Long Minimum" + Long.MIN_VALUE);
         LOGGER.info("Long Maximum" + Long.MAX_VALUE);
+        //byte,short,int,long
+        //? wrapper classses
+         
+        byte aPrimitive = 23;
+        Byte aWrapper = 23;
+
+        LOGGER.info("byte primitive" + aPrimitive);
+        LOGGER.info("Byte wrapper" + aWrapper );
+
+        int a = aWrapper.intValue();
+        LOGGER.info("Integer value Byte wrapper" + a);
+
+        
+
+
 } 
         private void floatingTypes(){
     //float type 
