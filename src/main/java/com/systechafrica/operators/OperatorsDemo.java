@@ -53,37 +53,7 @@ public class OperatorsDemo {
 
 
 }
-    public void assignmentOperators(){
-        //simple assignment operator  
-        int quantity = 4500;
     
-        // addition assignment operator
-
-        quantity += 100; // > quantity = quantity + 100;
-        LOGGER.info(" Addition Quantity :" + quantity);
-
-        // subtraction assignment operator
-
-        quantity -= 100; // > quantity = quantity - 100 ;
-        LOGGER.info(" Subtraction Quantity :" + quantity);
-
-        // division assignment operator
-
-        quantity /= 100; // > quantity = quantity / 100 ;
-        LOGGER.info(" Division Quantity :" +  quantity);
-
-        // multiplication assignment operator
-
-        quantity *= 100; // > quantity = quantity * 100 ;
-        LOGGER.info(" Multiplication Quantity :" + quantity);
-
-        // modulo assignment operator
-
-        quantity %= 100; // > quantity = quantity % 100 ;
-        LOGGER.info(" Modulo Quantity :" + quantity);
-
-        
-    }
     public void comparisonOperators(){
         int studentOneAge = 20;
         int studentTwoAge = 25;
@@ -116,7 +86,7 @@ public class OperatorsDemo {
     }
     public static void main(String[] args) {
         OperatorsDemo app = new OperatorsDemo();
-        app.arithmeticOperators();
+    
         app.assignmentOperators();
         app.comparisonOperators();
 
