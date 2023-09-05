@@ -4,10 +4,9 @@ import java.util.logging.Logger;
 
 public class AssignmentDemo {
     private static final Logger LOGGER = Logger.getLogger(AssignmentDemo.class.getName());
+
         public void assignmentOperators() {
-
-
-        // simple assignment operator
+     // simple assignment operator
         int quantity = 4500;
 
         // addition assignment operator
