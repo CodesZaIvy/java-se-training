@@ -115,9 +115,9 @@ public class OperatorsDemo {
     }
     public static void main(String[] args) {
         OperatorsDemo app = new OperatorsDemo();
-        //app.arithmeticOperators();
+        app.arithmeticOperators();
         //app.assignmentOperators();
-        app.comparisonOperators();
+        //app.comparisonOperators();
 
 
     }
