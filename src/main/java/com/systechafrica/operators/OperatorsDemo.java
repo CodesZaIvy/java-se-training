@@ -7,8 +7,7 @@ import java.util.logging.Logger;
 public class OperatorsDemo {
     private static final Logger LOGGER =Logger.getLogger(OperatorsDemo.class.getName());
 
-}
-public void comparisonOperators(){
+      public void comparisonOperators(){
         int studentOneAge = 20;
         int studentTwoAge = 25;
 

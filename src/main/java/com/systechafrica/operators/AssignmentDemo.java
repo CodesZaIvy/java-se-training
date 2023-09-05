@@ -1,11 +1,12 @@
-package com.systechafrica.operators 1;
+package com.systechafrica.operators;
 
 import java.util.logging.Logger;
 
 public class AssignmentDemo {
     private static final Logger LOGGER = Logger.getLogger(AssignmentDemo.class.getName());
+        public void assignmentOperators() {
 
-    public void assignmentOperators() {
+
         // simple assignment operator
         int quantity = 4500;
 
