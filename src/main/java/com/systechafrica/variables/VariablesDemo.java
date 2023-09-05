@@ -36,8 +36,19 @@ public class VariablesDemo {
 
         int a = aWrapper.intValue();
         LOGGER.info("Integer value Byte wrapper" + a);
-
         
+        //short
+        short s = 23;
+        Short aShort = 23;
+
+        //integer
+        int f = 23;
+        Integer aInt =23;
+
+        //long
+        long h =23;
+        //! Explicitly append suffix with Long wrapper with an L at the end
+        Long aLong =23L;
 
 
 } 
@@ -48,12 +59,27 @@ public class VariablesDemo {
     LOGGER.info("float value" + floatRate );
     LOGGER.info("double value" + doubleRate );    
 
+      //float
+        float price = 0.3537F;
+        Float priceFloat = 0.3537F;
+
+        
+        //double
+        double prtPrice = 0.3537;
+        Double priceDouble = 0.3537;
+
+
 
  }
           private void characterTypes(){
     //character type 
     char grade = 'A';
-    LOGGER.info("character value" + grade);    
+    LOGGER.info("character value" + grade);  
+    
+    //character
+    Character characterGrade ='F';
+     
+
  }
        private void booleanTypes(){
     //boolean type 
@@ -73,6 +99,13 @@ public class VariablesDemo {
         demo.floatingTypes();
         demo.characterTypes();
         demo.booleanTypes();
+
+        Long a = 2147483648L;
+
+        //int b =a.intValue();
+        int c = (int) a ;
+
+     LOGGER.info("int c value" + a);
 
  }
 
