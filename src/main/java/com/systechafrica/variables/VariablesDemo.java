@@ -43,7 +43,7 @@ public class VariablesDemo {
 
         //integer
         int f = 23;
-        Integer aInt =23;
+        Integer Int =23;
 
         //long
         long h =23;
