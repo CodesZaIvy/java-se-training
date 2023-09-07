@@ -19,11 +19,15 @@ public class ControlFlow {
         
     }
      public void switchStatement() {
-        String day = "Weekend";
+        String day = "Monday";
+        
         switch(day){
             case "MONDAY":
             LOGGER.info("Monday");
             break;
+            //break is used so as to break the cycle 
+            // i. e if i execute Monday,without the break command it will print out Monday and all the following days
+            //that follow .
              case "TUESDAY":
             LOGGER.info("Tuesday");
             break;
@@ -44,6 +48,8 @@ public class ControlFlow {
             break;
             default:
             LOGGER.info("Enter the specific day");
+            //default can be used when the user doesn't specify the specific day 
+            // i. e weekend instead of either saturday or sunday
             
         }
 
