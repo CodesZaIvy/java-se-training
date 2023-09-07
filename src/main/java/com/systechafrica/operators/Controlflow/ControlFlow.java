@@ -18,7 +18,8 @@ public class ControlFlow {
 
         
     }
-     public void switchStatement() {
+    public void switchStatement() {
+
         String day = "Monday";
         
         switch(day){
@@ -54,10 +55,24 @@ public class ControlFlow {
         }
 
      }
-    public static void main(String[] args) {
+    public void ifelseifStatement(){
+        int Pio = 65;
+        int Gama = 70;
+        int Pinto = 80;
+
+        if (Pio > Gama && Pio > Pinto) {
+            LOGGER.info("Older employee"+ Pio ); 
+        }else if(Gama > Pinto ){
+            LOGGER.info(" Older employee : "+ Gama ); 
+        }else
+        LOGGER.info(" Older employee: "+ Pinto); 
+
+}
+     public static void main(String[] args) {
         ControlFlow app = new ControlFlow();
         //app.ifelseStatement();
-        app.switchStatement ();
+        //app.switchStatement ();
+        app.ifelseifStatement();
 
     }
      
