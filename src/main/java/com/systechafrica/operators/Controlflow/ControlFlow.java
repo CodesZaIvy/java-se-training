@@ -19,10 +19,38 @@ public class ControlFlow {
         
     }
      public void switchStatement() {
+        String day = "Weekend";
+        switch(day){
+            case "MONDAY":
+            LOGGER.info("Monday");
+            break;
+             case "TUESDAY":
+            LOGGER.info("Tuesday");
+            break;
+             case "WEDNESDAY":
+            LOGGER.info("Wednesday");
+            break;
+             case "THURSDAY":
+            LOGGER.info("Thursday");
+            break;
+             case "FRIDAY":
+            LOGGER.info("Friday");
+            break;
+             case "SATURDAY":
+            LOGGER.info("Saturday");
+            break;
+             case "SUNDAY":
+            LOGGER.info("Sunday");
+            break;
+            default:
+            LOGGER.info("Enter the specific day");
+            
+        }
+
      }
     public static void main(String[] args) {
         ControlFlow app = new ControlFlow();
-        app.ifelseStatement();
+        //app.ifelseStatement();
         app.switchStatement ();
 
     }
