@@ -7,10 +7,13 @@ public class loop {
 
     public void While() {
 
+
         int i = 1;
         while (i<=4)
 {
         LOGGER.info("Accept Client:"+ i);
+
+         //print the inner loop(j) inside the outer one(i)
         int j = 1;
         while (j<=3){
         LOGGER.info("Receipt No. :"+ j);
@@ -22,12 +25,22 @@ public class loop {
 
 }
 //will print it as an incremented number as it is out of the loop 
+//aka a nested while loop
    LOGGER.info("Stop Printing:"+ i);
     }
-
+    public void doWhile(){
+         int i = 1;
+         do
+        
+{
+        LOGGER.info("Accept Client:"+ i);
+            i++;
+         }while (i<=4);
+        }
     public static void main(String[] args) {
         loop app = new loop();
-        app.While();
+        //app.While();
+        app.doWhile();
     }
 
 }
