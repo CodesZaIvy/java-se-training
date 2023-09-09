@@ -17,6 +17,10 @@ public class Concat {
         // String third = first + second;is equal to
         //String third = first.concat(second);
 
+
+        //?You can also directly concatenate the strings within the println method itself as System.out.println(first + second); 
+        //?or System.out.println(first.concat(second));.
+
         //LOGGER.info(third);
         LOGGER.info(first.concat(second));
 
