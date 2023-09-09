@@ -39,6 +39,8 @@ public class loop {
         }
    public void ForLoop(){
 
+
+    //creating a work schedule 
    for (int i = 1;i<=5;i++)
     //Days of the week 
    //int i =1 (Set initial value)
@@ -50,10 +52,8 @@ public class loop {
    //Working hours 
     for (int j=1; j<=9 ;j++)
     LOGGER.info("Hour:"  + (j+8) +"-"+(j+9));
-
-
+    //encapsulation
  }
-
 
  }
         public static void main(String[] args) {
