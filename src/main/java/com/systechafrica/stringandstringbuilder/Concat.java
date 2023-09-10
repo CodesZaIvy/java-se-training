@@ -13,16 +13,22 @@ public class Concat {
 
         String first = "John";
         String second = "Oenga";
+        String fifth = "Ongwae";
 
         // String third = first + second;is equal to
-        //String third = first.concat(second);
+        String third = second.concat(second);
+        //no effect
+        String fourth = first.concat(fifth);
+        //has affected the reassigning
 
 
         //?You can also directly concatenate the strings within the println method itself as System.out.println(first + second); 
         //?or System.out.println(first.concat(second));.
 
-        //LOGGER.info(third);
-        LOGGER.info(first.concat(second));
+        
+        //LOGGER.info(fourth + third);
+        //?
+        LOGGER.info(fourth.concat(fifth));
 
     }
 
