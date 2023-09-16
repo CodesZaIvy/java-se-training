@@ -60,7 +60,7 @@ public class Restaurant {
                     break;
                 case 7:
                     // Select choice 7 (Quit)
-                    exitProgram();
+                    quitProgram();
                     break;
                 default:
                     LOGGER.info("Null choice. Kindly choose a valid option.");
@@ -89,7 +89,7 @@ public class Restaurant {
             }
 
             if (loginAttempts == MAX_LOGIN_TRIALS) {
-                LOGGER.info("You have exceeded the maximum login attempts. Exiting.");
+                LOGGER.info("You have exceeded the maximum login attempts. Quiting.");
                 System.exit(1);
             }
         }
@@ -140,7 +140,7 @@ public class Restaurant {
 
           
             if (choice.equalsIgnoreCase("N")) {
-                showPaymentOptions();
+                showBillPaymentOptions();
                 break;
             } else if (choice.equalsIgnoreCase("Y")) {
                 showMenu();
@@ -162,7 +162,7 @@ public class Restaurant {
 
         // Find the selected menu item
         for (item item : menuItems) {
-            if (item.getItemId() == menuItemNumber) {
+            if (item.getItemNo() == menuItemNumber) {
                 selecteditem = item;
                 break;
             }
@@ -174,16 +174,16 @@ public class Restaurant {
         } else {
             LOGGER.info("Null menu item number.");
             return; 
-            // Exit the method if the item on the menu is null
+            // Quit the method if the item on the menu is null
         }
     }
 
-    private void showPaymentOptions() {
+    private void showBillPaymentOptions() {
         while (true) {
-            System.out.print("PROCEED TO PAYMENT (Y/N): ");
+            System.out.print("PROCEED TO BILLPAYMENT (Y/N): ");
             String choice = scanner.nextLine();
             if (choice.equalsIgnoreCase("Y")) {
-                processPayment();
+                processBillPayment();
                 break;
             } else if (choice.equalsIgnoreCase("N")) {
                 break;
@@ -193,14 +193,14 @@ public class Restaurant {
         }
     }
 
-    private void processPayment() {
-        // Select payment and display the balance
+    private void processBillPayment() {
+        // Select billpayment and display the balance
         LOGGER.info("Pay now for:");
 
         double total = 0.0;
         for (item item : orderItems) {
-            LOGGER.info(item.getItemName() + "----------------------" + item.getItemPrice());
-            total += item.getItemPrice();
+            LOGGER.info(item.getItemName() + "----------------------" + item.getItemCost());
+            total += item.getItemCost();
         }
 
         LOGGER.info("Total: " + total);
@@ -210,7 +210,7 @@ public class Restaurant {
         // Generate  character in a new line
 
         if (amountPaid < total) {
-            LOGGER.info("Insufficient payment. Kindly pay the full amount.");
+            LOGGER.info("Insufficient billpayment. Kindly pay the full amount.");
         } else {
             double balance = amountPaid - total;
             LOGGER.info("Your balance is --------------------" + balance);
@@ -219,7 +219,7 @@ public class Restaurant {
         }
     }
 
-    private void exitProgram() {
+    private void quitProgram() {
         // Close the program
         LOGGER.info("Thank you for being our loyal customer!");
         System.exit(0);

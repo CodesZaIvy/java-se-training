@@ -1,31 +1,31 @@
 package com.systechafrica.Restaurant;
 
 public class item {
-    private int itemId;
+    private int itemNo;
     private String itemName;
-    private double itemPrice;
+    private double itemCost;
 //Constructor
-    public item(int itemId, String itemName, double itemPrice) {
-        this.itemId = itemId;
+    public item(int itemNo, String itemName, double itemCost) {
+        this.itemNo = itemNo;
         this.itemName = itemName;
-        this.itemPrice = itemPrice;
+        this.itemCost = itemCost;
     }
 
-    public int getItemId() {
-        return itemId;
+    public int getItemNo() {
+        return itemNo;
     }
 
     public String getItemName() {
         return itemName;
     }
 
-    public double getItemPrice() {
-        return itemPrice;
+    public double getItemCost() {
+        return itemCost;
     }
 
     @Override
     public String toString() {
-        return "MenuItem [itemId=" + itemId + ", itemName=" + itemName + ", itemPrice=" + itemPrice + "]";
+        return "MenuItem [itemNo=" + itemNo + ", itemName=" + itemName + ", itemCost=" + itemCost + "]";
     }
 
     // @Override
