@@ -7,19 +7,21 @@ public class conversion {
 
      private  static final Logger LOGGER = Logger.getLogger(conversion.class.getName());
     
- public void casting_conversions(){
+ /**
+ * 
+ */
+public void casting_conversions(){
 
 
     byte b = 126;
     int a = b;
     //casting the int into a byte using (byte)a
-    byte k =(byte)a;
-
+    byte j =(byte)a;
     float f = 5.6f;
     //casting the float into an int using (int)f
     int t = (int) f;
 
-    LOGGER.info("t");
+    LOGGER.info(t);
 
 }
 public void type_promoting(){

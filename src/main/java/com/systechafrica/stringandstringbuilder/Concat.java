@@ -16,7 +16,7 @@ public class Concat {
         String fifth = "Ongwae";
 
         // String third = first + second;is equal to
-        String third = second.concat(second);
+        String f= second.concat(second);
         //no effect
         String fourth = first.concat(fifth);
         //has affected the reassigning

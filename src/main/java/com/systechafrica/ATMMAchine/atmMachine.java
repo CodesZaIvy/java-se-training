@@ -1,8 +1,8 @@
-package com.systechafrica;
+package com.systechafrica.ATMMAchine;
 
 public class atmMachine{
     final double INITIAL_BALANCE = 1000.00;
-    final double 
+
 
  public static void main(String[] args) {
     
@@ -27,4 +27,5 @@ public void executeTransfer(){
 }
 public void executeReceipt(){
 
+}
 }
