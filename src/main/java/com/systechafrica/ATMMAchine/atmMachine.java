@@ -1,10 +1,10 @@
-package com.systechafrica.ATMMAchine;
+package com.systechafrica.AtmMachine;
 
 import java.util.Scanner;
 import java.util.logging.Logger;
 
-public class atmMachine{
-    private  static final Logger LOGGER = Logger.getLogger(atmMachine.class.getName());
+public class AtmMachine{
+    private  static final Logger LOGGER = Logger.getLogger(AtmMachine.class.getName());
     
     final double InitialBalance = 1000.00;
     final double WithdrawalFee = 0.02;  
@@ -99,7 +99,7 @@ public boolean login() {
 
             
  public static void main(String[] args) {
-    atmMachine app = new atmMachine();
+    AtmMachine app = new AtmMachine();
     boolean EntryAccepted = app.login();
 
        
@@ -172,4 +172,7 @@ public boolean login() {
  
 
 
+
+
+    
 
