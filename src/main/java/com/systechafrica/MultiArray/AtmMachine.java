@@ -1,4 +1,4 @@
-package com.systechafrica.AtmMachine;
+package com.systechafrica.MultiArray;
 
 import java.util.Scanner;
 import java.util.logging.Logger;
@@ -161,9 +161,6 @@ public boolean login() {
         }
 
     }
-
-
-    
  }
  
 
@@ -175,4 +172,3 @@ public boolean login() {
 
 
     
-
