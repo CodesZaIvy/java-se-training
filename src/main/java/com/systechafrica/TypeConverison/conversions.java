@@ -3,9 +3,9 @@ package com.systechafrica.TypeConverison;
 import java.util.logging.Logger;
 
 
-public class conversion {
+public class conversions {
 
-     private  static final Logger LOGGER = Logger.getLogger(conversion.class.getName());
+     private  static final Logger LOGGER = Logger.getLogger(conversions.class.getName());
     
  /**
  * 
@@ -36,7 +36,7 @@ public void type_promoting(){
      
     public static void main(String[] args) {  
 
-        conversion app = new conversion();
+        conversions app = new conversions();
         app.casting_conversions();
         app.type_promoting();
     }
