@@ -2,6 +2,7 @@ package com.systechafrica.inheritance;
 
 import java.util.logging.Logger;
 
+import com.systechafrica.inheritance.HospitalPatients.DialysisPatient;
 import com.systechafrica.inheritance.HospitalPatients.Inpatient;
 import com.systechafrica.inheritance.HospitalPatients.OutPatient;
 
@@ -33,5 +34,12 @@ public class inheritance {
       n2.setTitle(" InPatient ");
       LOGGER.info(" Inpatient=>"+n1.toString());
       LOGGER.info(" Inpatient=>"+n2.toString());
+
+         DialysisPatient d1 = new DialysisPatient () ;
+      d1.setPatientname("violet");
+      d1.setPatientNo("0745123456");
+      d1.setPatientAddress("02-Kikuyu");
+      d1.setTitle(" DialysisPatient ");
+      LOGGER.info(" DialysisPatient=>"+d1.toString());
     } 
 }

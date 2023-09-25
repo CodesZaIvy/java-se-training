@@ -10,5 +10,7 @@ public class DialysisPatient extends patient{
     public void setTitle(String title) {
         this.title = title;
     }
-    
+    public String toString() {
+        return "Name: " + getPatientname()+" No: "+ getPatientNo()+" Address:"+getPatientAddress()+ " Title: "+getTitle();
+}
 }
