@@ -5,6 +5,8 @@ import java.util.logging.Logger;
 
 public class ControlFlow {
     private static final Logger LOGGER = Logger.getLogger(ControlFlow.class.getName());
+    public final String Control = null;
+    public Object controlflow;
 
     public void ifelseStatement() {
          int maths = 65;
@@ -75,6 +77,8 @@ public class ControlFlow {
         //app.switchStatement ();
         app.ifelseifStatement();
 
+    }
+    public void ControlFlow() {
     }
      
 }
