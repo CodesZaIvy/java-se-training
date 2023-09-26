@@ -7,8 +7,8 @@ import java.util.logging.Logger;
 public class pos {
     private static final Logger LOGGER = Logger.getLogger(pos.class.getName());
 
-    final String Default_Password = "Admin123";
-    final int Max_Login_Attempts = 3;
+    final String DEFAULT_PASSWORD= "Admin123";
+    final int MAX_LOGIN_ATTEMPTS = 3;
 
     private Scanner scanner;
     private ArrayList<item> cart;
@@ -30,19 +30,19 @@ public class pos {
     public void login() {
         int loginAttempts = 0;
 
-        while (loginAttempts < Max_Login_Attempts) {
+        while (loginAttempts < MAX_LOGIN_ATTEMPTS) {
             System.out.print("Enter password to log in: ");
             String enteredPassword = scanner.nextLine();
 
-            if (enteredPassword.equals(Default_Password)) {
+            if (enteredPassword.equals(DEFAULT_PASSWORD)) {
                 LOGGER.info("Successful login!");
                 break;
             } else {
                 loginAttempts++;
-                LOGGER.info("Incorrect password. Attempts left: " + (Max_Login_Attempts - loginAttempts));
+                LOGGER.info("Incorrect password. Attempts left: " + (MAX_LOGIN_ATTEMPTS - loginAttempts));
             }
 
-            if (loginAttempts == Max_Login_Attempts) {
+            if (loginAttempts == MAX_LOGIN_ATTEMPTS) {
                 LOGGER.info("You have exceeded the maximum login attempts. Exiting.");
                 System.exit(1);
             }
