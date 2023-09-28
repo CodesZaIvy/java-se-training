@@ -4,25 +4,27 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
-public class pos {
-    private static final Logger LOGGER = Logger.getLogger(pos.class.getName());
+public class PosShop {
+    private static final Logger LOGGER = Logger.getLogger(PosShop.class.getName());
 
     final String DEFAULT_PASSWORD= "Admin123";
     final int MAX_LOGIN_ATTEMPTS = 3;
 
     private Scanner scanner;
     private ArrayList<item> cart;
+    
 
-    // Constructor
-    public pos() {
+    // Constructora
+    public PosShop(){
         scanner = new Scanner(System.in);
         cart = new ArrayList<>();// creating an empty cart
     }
 
     public static void main(String[] args) {
 
-        pos a = new pos();
+        PosShop a = new PosShop();
         a.login();
+        
 
     }
 
@@ -35,17 +37,20 @@ public class pos {
             String enteredPassword = scanner.nextLine();
 
             if (enteredPassword.equals(DEFAULT_PASSWORD)) {
-                LOGGER.info("Successful login!");
+               System.out.println("Successful login!");
                 break;
             } else {
                 loginAttempts++;
-                LOGGER.info("Incorrect password. Attempts left: " + (MAX_LOGIN_ATTEMPTS - loginAttempts));
+               System.out.println("Incorrect password. Attempts left: " + (MAX_LOGIN_ATTEMPTS - loginAttempts));
+               
             }
 
             if (loginAttempts == MAX_LOGIN_ATTEMPTS) {
-                LOGGER.info("You have exceeded the maximum login attempts. Exiting.");
-                System.exit(1);
+               System.out.println("You have exceeded the maximum login attempts. Exiting.");
+        
+
             }
+            
         }
         while (true) {
             displayMenu();
@@ -67,23 +72,25 @@ public class pos {
                     displayReceipt();
                     break;
                 default:
-                    LOGGER.info("Invalid option. Please choose a valid option.");
+                   System.out.println("Invalid option. Please choose a valid option.");
             }
         }
 
     }
 
     public static void displayMenu() {
-        LOGGER.info("************************************\n");
-        LOGGER.info("********** SYSTECH POS SYSTEM ******\n");
-        LOGGER.info("''''''''''''''''''''''''''''''''''''\n");
-        LOGGER.info("____________________________________\n");
-        LOGGER.info("1:ADD ITEM");
-        LOGGER.info("2:MAKE PAYMENT");
-        LOGGER.info("3: DISPLAY RECEIPT");
-        LOGGER.info("''''''''''''''''''''''''''''''''''''\n");
+       System.out.println("************************************\n");
+       System.out.println("********** SYSTECH POS SYSTEM ******\n");
+       System.out.println("''''''''''''''''''''''''''''''''''''\n");
+       System.out.println("____________________________________\n");
+       System.out.println("1:ADD ITEM");
+       System.out.println("2:MAKE PAYMENT");
+       System.out.println("3: DISPLAY RECEIPT");
+       System.out.println("''''''''''''''''''''''''''''''''''''\n");
 
         System.out.print("Choose your option: ");
+
+        
 
     }
 
@@ -106,7 +113,7 @@ public class pos {
         // adds it to the shopping cart
         item items = new item(itemCodeEntered, quantity, unitPrice);
         cart.add(items);
-        LOGGER.info("Item added to cart.");
+       System.out.println("Item added to cart.");
     }
 
     // this method here calculates the total payment based on the items in the cart
@@ -114,22 +121,22 @@ public class pos {
     // handles the payment process, including providing change.
     public void makePayment() {
         if (cart.isEmpty()) {
-            LOGGER.info("No items in the cart. Add items before making a payment.");
+           System.out.println("No items in the cart. Add items before making a payment.");
             return;
         }
 
-        LOGGER.info("Item Code   Quantity   Unit Price   Total Value");
-        LOGGER.info("--------------------------------------------");
+       System.out.println("Item Code   Quantity   Unit Price   Total Value");
+       System.out.println("--------------------------------------------");
         double totalAmount = 0.0;
 
         for (item item : cart) {
-            LOGGER.info(item.getItemCode() + "   " + item.getQuantity() + "   " +
+           System.out.println(item.getItemCode() + "   " + item.getQuantity() + "   " +
                     item.getUnitPrice() + "   " + item.getTotalValue());
             totalAmount += item.getTotalValue();
         }
 
-        LOGGER.info("--------------------------------------------");
-        LOGGER.info("Total: " + totalAmount);
+       System.out.println("--------------------------------------------");
+       System.out.println("Total: " + totalAmount);
 
         // Ask for the amount given by the customer
         System.out.print("Enter the amount given by the customer: ");
@@ -138,8 +145,8 @@ public class pos {
 
         // Calculate and display the change
         double change = amountGiven - totalAmount;
-        LOGGER.info("Change: " + change);
-        LOGGER.info("THANK YOU FOR SHOPPING WITH US");
+       System.out.println("Change: " + change);
+       System.out.println("THANK YOU FOR SHOPPING WITH US");
     }
 
     // displays a receipt that shows the items in the cart,
@@ -147,25 +154,28 @@ public class pos {
     public void displayReceipt() {
 
         if (cart.isEmpty()) {
-            LOGGER.info("No items in the cart. Add items before displaying the receipt.");
+           System.out.println("No items in the cart. Add items before displaying the receipt.");
         } else {
-            LOGGER.info("***************");
-            LOGGER.info("RECEIPT");
-            LOGGER.info("__________________");
-            LOGGER.info("Item Code   Quantity   Unit Price   Total Value");
-            LOGGER.info("--------------------------------------------");
+           System.out.println("***************");
+           System.out.println("RECEIPT");
+           System.out.println("__________________");
+           System.out.println("Item Code   Quantity   Unit Price   Total Value");
+           System.out.println("--------------------------------------------");
             double totalAmount = 0.0;
 
             for (item item : cart) {
-                LOGGER.info(item.getItemCode() + "   " + item.getQuantity() + "   " +
+               System.out.println(item.getItemCode() + "   " + item.getQuantity() + "   " +
                         item.getUnitPrice() + "   " + item.getTotalValue());
                 totalAmount += item.getTotalValue();
+                
             }
 
-            LOGGER.info("--------------------------------------------");
-            LOGGER.info("Total: " + totalAmount);
-            LOGGER.info("__________________");
+           System.out.println("--------------------------------------------");
+           System.out.println("Total: " + totalAmount);
+           System.out.println("__________________");
+           System.exit(0);
 
+        
         }
     }
 }
