@@ -1,7 +1,9 @@
 package com.systechafrica.POS;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 
 public class PosShop {
@@ -20,7 +22,14 @@ public class PosShop {
         cart = new ArrayList<>();// creating an empty cart
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SecurityException, IOException {
+
+        FileHandler fileHandler = new FileHandler("log.txt");
+        LOGGER.addHandler(fileHandler);
+        CustomFormatter formatter =new CustomFormatter();
+        fileHandler.setFormatter(formatter);
+        
+
 
         PosShop a = new PosShop();
         a.login();
@@ -37,7 +46,7 @@ public class PosShop {
             String enteredPassword = scanner.nextLine();
 
             if (enteredPassword.equals(DEFAULT_PASSWORD)) {
-               System.out.println("Successful login!");
+               LOGGER.info("Successful Login");
                 break;
             } else {
                 loginAttempts++;
