@@ -1,17 +1,20 @@
-package com.systechafrica.POS;
+package com.systechafrica.pos;
 
 import java.util.logging.Logger;
 
-
-public class item {
-    private static final Logger LOGGER = Logger.getLogger(item.class.getName());
+public class Item {
+    private static final Logger LOGGER = Logger.getLogger(Item.class.getName());
     // properties
     private String itemCode;
     private int quantity;
     private double unitPrice;
 
+    public Item() {
+
+    }
+
     // constructor
-    public item(String itemCode, int quantity, double unitPrice) {
+    public Item(String itemCode, int quantity, double unitPrice) {
         this.itemCode = itemCode;
         this.quantity = quantity;
         this.unitPrice = unitPrice;
@@ -51,11 +54,7 @@ public class item {
 
     @Override
     public String toString() {
-        return "Items [itemCode=" + itemCode + ", quantity=" + quantity + ", unitPrice=" + unitPrice + "]";
+        return "Item [itemCode=" + itemCode + ", quantity=" + quantity + ", unitPrice=" + unitPrice + "]";
     }
 
 }
-
-
-    
-
