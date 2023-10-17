@@ -16,7 +16,7 @@ public class scanner{
         input.close();
     }
 
-    public String nextLine() {
+    public static String nextLine() {
         return null;
     }
 

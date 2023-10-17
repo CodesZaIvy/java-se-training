@@ -73,6 +73,9 @@ public class Books {
 
    
 
+    /**
+     * 
+     */
     public void searchByISBN() {
         System.out.println(
                 "\t\t\t\tSEARCH BY ISBN\n");
@@ -83,8 +86,11 @@ public class Books {
         int flag = 0;
         System.out.println(
                 "ISBN\t\tTitle\t\tAvailabe Quantity\t\tTotal Quantity");
-        for (int i = 0; i < count; i++) {
-            if (bookISBN == theBooks[i].bookISBN) {
+        for (int i = 0; i < count;) {
+            String bookISBNb = "ivy"; 
+
+            if (bookISBNb == theBooks[i].bookISBN)
+        
                 System.out.println(
                         theBooks[i].bookISBN + "\t\t"
                                 + theBooks[i].title + "\t\t"
@@ -93,7 +99,7 @@ public class Books {
                 flag++;
                 return;
             }
-        }
+        
         if (flag == 0)
             System.out.println("No Book for ISBN" + bookISBN + "Found");
 

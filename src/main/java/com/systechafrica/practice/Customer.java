@@ -14,7 +14,7 @@ if (sb.equals(s))    {
 else if (sb.toString() .equals(s.toString())){
 
 }
-} else {
+}  {
     System.out.println("No match");
 }
 

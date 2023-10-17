@@ -78,6 +78,10 @@ private static void SetAndHashSet(){
 
 
 
+    private static void printSet(Set<Client> clients) {
+}
+
+
     @Override
     public String toString() {
         return "Client [id=" + id +
