@@ -54,7 +54,6 @@ public class Student {
 
             }
 
-        
         }
         while (true) {
             displayMenu();
@@ -83,9 +82,6 @@ public class Student {
         }
 
     }
-
-
-    
 
     public void checkOutBook(Books books) {
     }
